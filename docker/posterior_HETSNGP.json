@@ -1,0 +1,36 @@
+{
+    "args": {
+        "config": "shift/configs/CoverNetHETSNGP_posterior.gin",
+        "populate": false,
+        "dir": "/workspace/results/docker_results/",
+        "optimize3": false,
+        "repetitions": 1,
+        "eval": true
+    },
+    "NuscenesDataset.data_dir" : "/pspace/datasets/motion_prediction/nuscenes/",
+    "NuscenesDataset.cache_dir" : "/tspace/cacheNewStopDA/", 
+    "train/NuscenesDataset.limit": 0.01,
+    "Trainer.post_evaluate": true,
+    "Trainer.epochs": 2,
+    "Trainer.batch_size": 16,
+    "Trainer.mixed_precision": false,
+    "Trainer.spec_norm_bound": 2.65 ,
+    "Trainer.gp_kernel_scale": 22.016,
+    "Trainer.gp_l2_regularizer": 0.05,
+    "Trainer.lr": 0.002,
+    "Trainer.use_spec_norm": true,
+    "Trainer.gp_num_inducing": 1024,
+    "Trainer.extractor_reg": "equivalent",
+    "Trainer.gp_posterior_temp": 35,
+    "Trainer.extractor_posterior_temp": 2.8,
+    "Trainer.train_mc_samples": 800,
+    "Trainer.test_mc_samples": 1000,
+    "Trainer.temperature": 1.25,
+    "Trainer.sngp_var_weight": 0.1,
+    "Trainer.het_var_weight": 0.2,
+    "Trainer.prior_model": "/workspace/results/docker_results/knowledge/Epsilon4/CovernetHETSNGP/models/Oct02_10-35-45/model_0/Model_ep50-50",
+    "Trainer.track_file": "/workspace/results/docker_results/hetresults.csv",
+    "Trainer.description": "description here"
+}
+
+

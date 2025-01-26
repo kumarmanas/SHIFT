@@ -1,0 +1,29 @@
+{
+    "args": {
+        "config": "shift/configs/CoverNetHETSNGP_Prior.gin",
+        "populate": false,
+        "dir": "/workspace/results/docker_results/",
+        "optimize3": false,
+        "eval": true
+    },
+    "NuscenesDataset.data_dir" : "/workspace/datasets/nuscenes/",
+    "NuscenesDataset.cache_dir" : "/kspace/hetDA/",
+    "NuscenesDataset.y_all_valid": true,
+    "Trainer.multi_label": true,
+    "Trainer.eps_set" : 4,
+    "Trainer.epochs": 250,
+    "Trainer.batch_size": 8,
+    "Trainer.mixed_precision": false,
+    "Trainer.spec_norm_bound": 1.9375,
+    "Trainer.gp_kernel_scale": 43.78125,
+    "Trainer.gp_l2_regularizer": 0.625,
+    "Trainer.lr": 0.00086,
+    "Trainer.use_spec_norm": true,
+    "Trainer.train_mc_samples": 200,
+    "Trainer.test_mc_samples": 1000,
+    "Trainer.temperature": 1,
+    "Trainer.sngp_var_weight": 0.05,
+    "Trainer.het_var_weight": 0.1,
+    "Trainer.track_file": "/workspace/results/docker_results/hetresults.csv",
+    "Trainer.description": "Description Here"
+}
