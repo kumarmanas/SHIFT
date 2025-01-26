@@ -1,0 +1,37 @@
+# Default Configuration for SNGP CoverNet
+NuscenesDataset.data_dir = '/home/ec2-user/datasets/home-dataset/sets/nuscenes/data/'
+NuscenesDataset.data_version = 'v1.0-trainval'
+
+train/NuscenesDataset.split = 'train'
+val/NuscenesDataset.split = 'train_val'
+test/NuscenesDataset.split = 'val'
+
+NuscenesDataset.y_all_valid=False
+Trainer.multi_label=False
+
+Trainer.model_factory = @CovernetHETSNGP
+Trainer.batch_size=32
+Trainer.epochs=400
+Trainer.lr = 8e-6
+Trainer.spec_norm_bound = 2
+Trainer.eps_set=4
+
+#Trainer.use_spec_norm = True # if feature extractor is spectral normalized or not
+#Trainer.spec_norm_iteration # number of power iterations
+#Trainer.spec_norm_bound # upper bound of spectral norm
+
+#Trainer.use_gp_layer = True # if GP is used as last layer or not
+#Trainer.gp_num_inducing # number of random features
+#Trainer.gp_kernel_scale # length scale of RBF kernel
+#Trainer.gp_l2_regularizer # weight of L2 regularization on extractor output weights
+#Trainer.gp_cov_ridge_factor # covariance computation
+#Trainer.gp_cov_discount_factor # covariance computation
+#Trainer.gp_mean_field_factor=0.08 # temperature in mean field
+
+Trainer.early_stop_delay = 0
+Trainer.early_stop_patience = 15
+						
+paramSearch.space = {"lr": ("logfloat", 0.00001, 0.005),     
+				"gp_l2_regularizer": ("logfloat", 0.1, 1.),
+            		}  
+paramSearch.numTrials = 9

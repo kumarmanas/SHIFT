@@ -1,0 +1,5 @@
+#!/bin/sh
+python shift/main.py -j /workspace/source/docker/posterior_HETSNGP.json
+#for prior model creation use below:
+#python shift/main.py -j /workspace/source/docker/prior_HETSNGP.json
+#python3 

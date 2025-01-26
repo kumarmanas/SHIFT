@@ -1,0 +1,30 @@
+{
+    "args": {
+        "config": "shift/configs/CoverNetSNGP_posterior.gin",
+        "populate": true,
+        "dir": "/workspace/results/docker_results/",
+        "optimize3": false,
+        "eval": true,
+        "repetitions": 5
+    },
+    "NuscenesDataset.data_dir" : "/workspace/datasets/nuscenes/",
+    "NuscenesDataset.cache_dir" : "/workspace/cache/",
+    "train/NuscenesDataset.limit":0.1,
+    "Trainer.eps_set" : 4,
+    "Trainer.epochs": 200,
+    "Trainer.batch_size": 32,
+    "Trainer.mixed_precision": false,
+    "Trainer.spec_norm_bound": 8.21875 ,
+    "Trainer.gp_kernel_scale": 22.016,
+    "Trainer.gp_l2_regularizer": 0.0,
+    "Trainer.lr": 2.0e-4,
+    "Trainer.use_spec_norm": true,
+    "Trainer.gp_num_inducing": 1024,
+    "Trainer.extractor_reg": "equivalent",
+    "Trainer.gp_posterior_temp": 32.0,
+    "Trainer.extractor_posterior_temp": 32.0,
+    "Trainer.prior_model": "/workspace/results/docker_results/trajectory/Epsilon4/CovernetSNGP/models/Feb11_17-49-49/model_0/Model_ep289-105",
+    "Trainer.track_file": "/workspace/results/docker_results/results.csv",
+    "Trainer.description": "description here"
+}
+
