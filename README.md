@@ -1,4 +1,4 @@
-##Heteroscedastic Spectral Normalized Gaussian Process based Trajectory Predictor
+## Heteroscedastic Spectral Normalized Gaussian Process based Trajectory Predictor
 
 ## Overview
 
