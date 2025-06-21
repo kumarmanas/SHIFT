@@ -1,5 +1,11 @@
 ## Heteroscedastic Spectral Normalized Gaussian Process based Trajectory Predictor
 
+## TODO
+
+- [ ] LLM and RAG information grounding
+- [ ] Upload final model weights (prior and posterior) to shared directory
+- [ ] Finalize and update README for non docker setup
+
 ## Overview
 
 This project deals with trajectory prediction using both aleatoric and epistemic uncertainty for better uncertainty calibration. We train both prior and posterior models with uncertainty quantification, using traffic rule (for prior model) and observed data (for posterior) for inference. The model uses Heteroscedastity for aleatoric uncertainty quantification and Spectral Normalized Gaussian Processes (SNGP) for epistemic uncertainty calculation. Finally, we use Monte Carlo sampling for posterior inference.
